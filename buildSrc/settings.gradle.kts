@@ -17,8 +17,12 @@
 fun RepositoryHandler.kotlinDev() =
     maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
 
+fun RepositoryHandler.kotlinEap() =
+    maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
+
 pluginManagement {
     repositories {
+        kotlinEap()
         kotlinDev()
         gradlePluginPortal()
     }

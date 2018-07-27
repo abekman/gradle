@@ -83,16 +83,6 @@ public interface ProgressLogger {
     String getLoggingHeader();
 
     /**
-     * <p>Sets the logging header for the operation. This is logged before any other log messages for this operation are logged. It is usually
-     * also logged at the end of the operation, along with the final status message. Defaults to null.
-     *
-     * @param header The header. May be empty or null.
-     * @deprecated Use {@link org.gradle.api.logging.Logger#lifecycle(String)} instead.
-     */
-    @Deprecated
-    ProgressLogger setLoggingHeader(String header);
-
-    /**
      * Convenience method that sets descriptions and logs started() event.
      *
      * @param status The initial status message. Can be null or empty.

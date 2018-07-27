@@ -88,10 +88,9 @@ class RuntimeShadedJarCreator {
     }
 
     public void create(final File outputJar, final Iterable<? extends File> files) {
-        LOGGER.info("Generating JAR file: " + outputJar.getAbsolutePath());
+        LOGGER.info("Generating " + outputJar.getAbsolutePath());
         ProgressLogger progressLogger = progressLoggerFactory.newOperation(RuntimeShadedJarCreator.class);
-        progressLogger.setDescription("Gradle JARs generation");
-        progressLogger.setLoggingHeader("Generating JAR file '" + outputJar.getName() + "'");
+        progressLogger.setDescription("Generating " + outputJar.getName());
         progressLogger.started();
 
         try {

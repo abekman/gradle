@@ -69,8 +69,7 @@ class RuntimeShadedJarCreatorTest extends Specification {
 
         then:
         1 * progressLoggerFactory.newOperation(RuntimeShadedJarCreator) >> progressLogger
-        1 * progressLogger.setDescription('Gradle JARs generation')
-        1 * progressLogger.setLoggingHeader("Generating JAR file '$outputJar.name'")
+        1 * progressLogger.setDescription("Generating JAR file '$outputJar.name'")
         1 * progressLogger.started()
         (1 + ADDITIONAL_PROGRESS_STEPS) * progressLogger.progress(_)
         1 * progressLogger.completed()
@@ -93,8 +92,7 @@ class RuntimeShadedJarCreatorTest extends Specification {
 
         then:
         1 * progressLoggerFactory.newOperation(RuntimeShadedJarCreator) >> progressLogger
-        1 * progressLogger.setDescription('Gradle JARs generation')
-        1 * progressLogger.setLoggingHeader("Generating JAR file '$outputJar.name'")
+        1 * progressLogger.setDescription("Generating JAR file '$outputJar.name'")
         1 * progressLogger.started()
         (2 + ADDITIONAL_PROGRESS_STEPS) * progressLogger.progress(_)
         1 * progressLogger.completed()
@@ -217,8 +215,7 @@ org.gradle.api.internal.tasks.CompileServices
 
         then:
         1 * progressLoggerFactory.newOperation(RuntimeShadedJarCreator) >> progressLogger
-        1 * progressLogger.setDescription('Gradle JARs generation')
-        1 * progressLogger.setLoggingHeader("Generating JAR file '$outputJar.name'")
+        1 * progressLogger.setDescription("Generating JAR file '$outputJar.name'")
         1 * progressLogger.started()
         (3 + ADDITIONAL_PROGRESS_STEPS) * progressLogger.progress(_)
         1 * progressLogger.completed()
@@ -267,8 +264,7 @@ org.gradle.api.internal.tasks.CompileServices"""
 
         then:
         1 * progressLoggerFactory.newOperation(RuntimeShadedJarCreator) >> progressLogger
-        1 * progressLogger.setDescription('Gradle JARs generation')
-        1 * progressLogger.setLoggingHeader("Generating JAR file '$outputJar.name'")
+        1 * progressLogger.setDescription("Generating JAR file '$outputJar.name'")
         1 * progressLogger.started()
         (1 + ADDITIONAL_PROGRESS_STEPS) * progressLogger.progress(_)
         1 * progressLogger.completed()

@@ -181,8 +181,11 @@ public class DefaultProgressLoggerFactory implements ProgressLoggerFactory {
             return loggingHeader;
         }
 
-        @Override
-        public ProgressLogger setLoggingHeader(String loggingHeader) {
+        /**
+         * Intentionally write-only since we want to remove the concept of logging headers eventually.
+         * Only used for grouping output by task.
+         */
+        private ProgressLogger setLoggingHeader(String loggingHeader) {
             assertCanConfigure();
             this.loggingHeader = loggingHeader;
             return this;

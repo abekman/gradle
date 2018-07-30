@@ -1213,6 +1213,11 @@ public class DefaultProject extends AbstractPluginAware implements ProjectIntern
     }
 
     @Override
+    public Task task(String task, Action<? super Task> configureAction) {
+        return taskContainer.create(task, configureAction);
+    }
+
+    @Override
     public Task task(String task, Closure configureClosure) {
         return taskContainer.create(task).configure(configureClosure);
     }
